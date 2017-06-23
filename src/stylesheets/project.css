@@ -1,0 +1,40 @@
+.project {
+  width: 150px;
+	height: 150px;
+	background: red;
+	-moz-border-radius: 100px;
+	-webkit-border-radius: 100px;
+	border-radius: 100px;
+  transform: scale(1);
+  -webkit-transition: all .2s ease-in-out;
+  margin: 20px;
+}
+
+.project-icon {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  height: 50%;
+  width: 50%;
+  transform: scale(1);
+  -webkit-filter: drop-shadow(0 0 1px black);
+  -webkit-transition: all .2s ease-in-out;
+}
+
+.project-title {
+  padding-top: 10%;
+  transform: scale(1);
+  -webkit-filter: drop-shadow(0 0 1px black);
+  -webkit-transition: all .2s ease-in-out;
+}
+
+.project:hover > *{
+  transform: scale(.9);
+ -webkit-filter: drop-shadow(0 0 0px black);
+ -webkit-transition: all .2s ease-in-out;
+}
+
+.project:hover {
+  transform: scale(1.1);
+ -webkit-transition: transform .2s ease-in-out;
+}

@@ -1,0 +1,35 @@
+.image-carousel {
+  border:2px solid #021a40;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 40%;
+  top: 0;
+  left: 0;
+  margin: 10px;
+}
+
+.slide {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  position: absolute;
+  margin-top: auto;
+}
+
+
+.translate-enter {
+  transform: translateX(100%);
+}
+.translate-enter.translate-enter-active {
+  transform: translateX(0%);
+  transition: all 1000ms ease-in-out;
+}
+.translate-leave {
+  transform: translateX(0%);
+}
+.translate-leave.translate-leave-active {
+  transform: translateX(-100%);
+  transition: all 1000ms ease-in-out;
+}

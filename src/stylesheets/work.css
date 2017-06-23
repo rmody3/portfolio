@@ -1,0 +1,8 @@
+.work {
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-content: center;
+  background-color: #A9A9A9;
+}

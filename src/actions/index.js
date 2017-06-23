@@ -5,3 +5,10 @@ export const updateView = (view) => {
     payload: view
   }
 }
+
+export const updateProjectDetails = (projectDetails) => {
+  return {
+    type: "UPDATE_PROJECT_DETAILS",
+    payload: projectDetails
+  }
+}

@@ -3,6 +3,7 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import {updateView} from '../actions/index'
 import '../stylesheets/header.css'
+import $ from 'jquery'
 
 
 class Header extends Component {
@@ -15,17 +16,55 @@ class Header extends Component {
     this.props.updateView(view)
   }
 
+  componentDidMount(){
+    var welcome = "#10e88a",
+		about = "#7f3995",
+		work = "#0d78e7"
+
+    var init_header_position = $('#header').position().top
+    console.log(init_header_position)
+    $(window).scroll(function(){
+      var header = $('#header')
+          scroll = $(window).scrollTop();
+          welcome = $('#header').position().bottom
+          console.log(init_header_position)
+          console.log(scroll)
+      if (scroll >= header.position().top){
+        header.removeClass('sticky');
+        header.addClass('fixed');
+      }
+      if (scroll < init_header_position) {
+        header.removeClass('fixed');
+        header.addClass('sticky');
+      }
+    });
+  }
+  //
+  //   $(window).on("scroll touchmove", function() {
+  //   		if ($(document).scrollTop() >= $("#header").position().top) {
+  //   				$('#header').add
+  //   				$('#header').css('position', "fixed")
+  //       };
+  //
+  //   		if ($(document).scrollTop() > $("#about").position().top) {
+  //   				$('#header').css('background', about)
+  //   		};
+  //
+  //   		if ($(document).scrollTop() > $("#work").position().top) {
+  //   				$('#header').css('background', work)
+  //   		};
+  //   });
+
+
   render() {
     return (
-      <div className="header">
-        <ul className="header-list">
-          <li onClick={this.handleOnClick.bind(null, "home")}>Home </li>
-          <li onClick={this.handleOnClick.bind(null, "work")}>Work </li>
-          <li onClick={this.handleOnClick.bind(null, "blog")}>Blog</li>
-          <li onClick={this.handleOnClick.bind(null, "about")}>About</li>
-          <li onClick={this.handleOnClick.bind(null, "contact")}>Contact</li>
-        </ul>
-      </div>
+      <nav className="sticky" id="header">
+        <div className="header-list">
+          <div onClick={this.handleOnClick.bind(null, "about")}>About</div>
+          <div onClick={this.handleOnClick.bind(null, "work")}>Work </div>
+          <div><a href="https://medium.com/@RahulTMody">Blog</a></div>
+        </div>
+      </nav>
     );
   }
 }

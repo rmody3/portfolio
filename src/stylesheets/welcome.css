@@ -1,0 +1,48 @@
+.welcome {
+    height: 100vh;
+    /* Create the parallax scrolling effect */
+    background-image: url("/../../images/welcome-boats.jpg");
+    filter: grayscale(100%);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+.title-wrapper{
+  margin-top: 10%;
+  display: inline-flex;
+  overflow-x: hidden;
+  width: 50%;
+  margin-left: 25%;
+}
+
+.title-static {
+  text-decoration: none;
+  margin-right: 9px;
+}
+
+.title-changing {
+  text-decoration: underline;
+}
+
+.title-changing-enter {
+  opacity: 0.00;
+}
+
+.title-changing-enter.title-changing-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+
+}
+
+.title-changing-leave {
+  opacity: 0;
+}
+
+.title-changing-leave.title-changing-leave-active {
+  opacity: 0;
+  transition: opacity 500ms ease-in;
+
+}

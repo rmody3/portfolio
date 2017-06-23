@@ -1,0 +1,14 @@
+.projectDetails-inactive {
+  position: relative;
+  height: 0vh;
+  -webkit-transition: all .5s ease;
+  background-color: #EFEFEF
+
+}
+.projectDetails-active {
+  position: relative;
+  height: 100vh;
+  -webkit-transition: all .5s ease;
+  display: flex;
+  background-color: #EFEFEF
+}

@@ -1,0 +1,41 @@
+
+
+.left-container {
+  float: left;
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  height: 100%
+}
+.right-container {
+  float: right;
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+}
+
+/*.image-container {
+  position: relative;
+  float: left;
+  overflow-y: hidden;
+}*/
+
+.summary {
+  margin: 20px;
+  border: 1px solid black;
+}
+
+.detail-list {
+  margin: 20px;
+  border: 1px solid black;
+  text-align: left;
+}
+
+.project-links-container {
+  position: absolute;
+  z-index: 1
+}
+
+.project-links {
+  margin: 10px;
+}
