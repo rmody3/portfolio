@@ -5,7 +5,6 @@ import React, { Component } from 'react';
 // import Chronicle from './projects/chronicle'
 // import Prescribed from './projects/prescribed'
 // import YeaOrNay from './projects/yeaOrNay'
-import { CSSTransitionGroup } from 'react-transition-group'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import '../stylesheets/imageCarousel.css'
 

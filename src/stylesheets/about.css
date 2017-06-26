@@ -21,9 +21,8 @@
 }
 
 #summary {
-  height: 100%;
-  text-align: center;
-  width: 50%;
+  text-align: justify;
+  vertical-align: middle;
   padding: 1px;
 }
 
@@ -31,15 +30,37 @@
 
 .top,.bottom {
   flex-direction: row;
-  overflow: hidden;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
+
+#skills-container {
+  width: 50%;
+  overflow: auto;
+  overflow-y: hidden;
+  margin: 0 auto;
+  white-space: nowrap
+}
+.right {
+  width: 50%;
+  align-items: center;
+}
 
 .left {
   flex-direction: column;
   width: 40%;
   justify-content: space-between;
-  align-items: center;
+  vertical-align: center;
+}
+
+
+
+.skill {
+  width: 100px;
+  height: 100px;
+  margin: 20px 10px;
+  display: inline;
 }
 
 

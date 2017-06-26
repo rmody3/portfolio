@@ -43,20 +43,28 @@ class About extends Component {
                   <a target="_blank" title="add me on linkedin" href="https://www.linkedin.com/in/rahul-mody/"><img className="social" src="images/linkedin.svg" height="30" width="30" /></a>
                   <a target="_blank" title="follow me on medium" href="https://medium.com/@RahulTMody"><img className="social" src="images/medium.png" height="30" width="30" /></a>
                   <a target="_blank" title="follow me on github" href="https://github.com/rmody3"><img  className="social" src="images/github.png" height="30" width="30" /></a>
-                  <a target="_blank" title="follow me on github" href="files/resume.pdf"><img  className="social" src="images/adobe.jpeg" height="30" width="30" /></a>
+                  <a target="_blank" title="check out my resume" href="files/resume.pdf"><img  className="social" src="images/adobe.jpeg" height="30" width="30" /></a>
                 </div>
               </div>
-              <div id="summary">
-                Im <strong>Rahul Mody</strong>. I am a full stack web developer and love to build useful applications centered around simple data insights. I love creating and learning through creating, thats why I became a developer. My career did not start in web development though, it started in data. I graduated from Georgia Tech as an Industrial Engineer and worked as data analyst. Sometime after I made the decision to focus on development and studied Web Development at The Flatiron School in NYC. When Im not writing code, you can find me at a rec league game, on some hiking trail, or in the kitchen making a mess.
+              <div className="container top right">
+                <div id="summary">
+                  Im <strong>Rahul Mody</strong>. I am a full stack web developer and love to build useful applications centered around simple data insights. I love creating and learning through creating, thats why I became a developer. My career did not start in web development though, it started in data. I graduated from Georgia Tech as an Industrial Engineer and worked as data analyst. Sometime after I made the decision to focus on development and studied Web Development at The Flatiron School in NYC. When Im not writing code, you can find me at a rec league game, on some hiking trail, or in the kitchen making a mess.
+                </div>
               </div>
             </div>
-            <div className="container bottom">
-              <h3>Skills</h3>
-              <ul>
-                <li>Programming: Ruby on Rails, Javascript, React/Redux, JQuery, R, BASH, GIT, MATLAB</li>
-                <li>Statistical Analysis: Forecasting/ Regression, Probability Distribution Modeling, Hypothesis Testing</li>
-              </ul>
-            </div>
+              <div id="skills-container">
+                <img className="skill" src="images/ruby.png" />
+                <img className="skill" src="images/rails.png" />
+                <img className="skill" src="images/javascript.png" />
+                <img className="skill" src="images/jquery.png" />
+                <img className="skill" src="images/react.svg" />
+                <img className="skill" src="images/redux.png" />
+                <img className="skill" src="images/html5.png" />
+                <img className="skill" src="images/css3.svg" />
+                <img className="skill" src="images/git.png" />
+                <img className="skill" src="images/bash.png" />
+                <img className="skill" src="images/R.svg" />
+              </div>
           </div>
 
       </section>
