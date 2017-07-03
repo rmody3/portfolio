@@ -31,7 +31,7 @@ class About extends Component {
   }
 
   scrollSkill(direction){
-    let far = $( '#skills-container' ).width();
+    let far = $( '#skills-container' ).width()/2*direction;
     let pos = $('#skills-container').scrollLeft() + far;
     $('#skills-container').animate( { scrollLeft: pos }, 1000)
   }
@@ -58,14 +58,16 @@ class About extends Component {
                 </div>
               </div>
               <div className="container top right">
+                <h1>About Rahul</h1>
                 <div id="summary">
                   Im <strong>Rahul Mody</strong>. I am a full stack web developer and love to build useful applications centered around simple data insights. I love creating and learning through creating, thats why I became a developer. My career did not start in web development though, it started in data. I graduated from Georgia Tech as an Industrial Engineer and worked as data analyst. Sometime after I made the decision to focus on development and studied Web Development at The Flatiron School in NYC. When Im not writing code, you can find me at a rec league game, on some hiking trail, or in the kitchen making a mess.
                 </div>
               </div>
             </div>
             <div className="container bottom">
+              <h1>Skills</h1>
               <div id="skills-wrapper">
-                <a className="prev" onClick={this.scrollSkill.bind(null,1)}>&#10094;</a>
+                <a className="prev" onClick={this.scrollSkill.bind(null,-1)}>&#10094;</a>
                 <div id="skills-container">
                   <img className="skill" src="images/ruby.png" />
                   <img className="skill" src="images/rails.png" />
@@ -79,7 +81,7 @@ class About extends Component {
                   <img className="skill" src="images/bash.png" />
                   <img className="skill" src="images/R.svg" />
                 </div>
-                <a className="next" onClick={this.scrollSkill.bind(null,-1)}>&#10095;</a>
+                <a className="next" onClick={this.scrollSkill.bind(null,1)}>&#10095;</a>
               </div>
             </div>
           </div>
