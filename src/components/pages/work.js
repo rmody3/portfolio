@@ -62,14 +62,14 @@ class Work extends Component {
 
   render() {
     return (
-      <div>
-        <div className="work">
+      <section className="work">
+        <div className="projects-container">
           <Project color="blue" image='images/chronicle_logo.svg' title='Chronicle' updateProjectDetails={this.updateProjectDetails}/>
           <Project color="red" image='images/prescribed_logo.svg' title='Prescribed' updateProjectDetails={this.updateProjectDetails}/>
           <Project color="green" image='images/yay_or_nay_logo.svg'title='Yea or Nay' updateProjectDetails={this.updateProjectDetails}/>
         </div>
         {<ProjectDetails class={this.state.class} currProject={this.state.currProject}/> }
-      </div>
+      </section>
     );
   }
 }

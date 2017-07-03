@@ -21,23 +21,24 @@ class Header extends Component {
 		about = "#7f3995",
 		work = "#0d78e7"
 
-    var init_header_position = $('#header').position().top
-    console.log(init_header_position)
+    var init_header_position = $('#header').offset().top
     $(window).scroll(function(){
-      var header = $('#header')
-          scroll = $(window).scrollTop();
-          welcome = $('#header').position().bottom
-          console.log(init_header_position)
-          console.log(scroll)
-      if (scroll >= header.position().top){
+      var header = $('#header'),
+          scroll = $(window).scrollTop(),
+          height = $("#header").outerHeight()
+
+      if (scroll >= init_header_position){
         header.removeClass('sticky');
         header.addClass('fixed');
-      }
-      if (scroll < init_header_position) {
+
+      } else {
         header.removeClass('fixed');
         header.addClass('sticky');
+        header.css('margin-bottom', height *-1)
       }
     });
+
+    //if size of viewport changes than init header position is different and causes header to jump
   }
   //
   //   $(window).on("scroll touchmove", function() {

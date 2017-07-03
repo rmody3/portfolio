@@ -1,8 +1,17 @@
 .work {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: center;
+}
+
+.projects-container {
+  position: auto;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
   align-content: center;
-  background-color: #A9A9A9;
+  background-color: #fff;
+  margin-top: 10;
+  margin-bottom: 10;
 }

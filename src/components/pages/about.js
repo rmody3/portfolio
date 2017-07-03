@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import '../../stylesheets/about.css'
 import { CSSTransitionGroup } from 'react-transition-group'
+import $ from 'jquery'
+
 
 class About extends Component {
   constructor(){
@@ -11,6 +13,7 @@ class About extends Component {
       aboutTitle: ["a web developer", "a builder", "a data enthusiast", "an outdoorsman" ],
       currentTitleIndex: 0
     }
+    this.scrollSkill = this.scrollSkill.bind(this)
   }
 
   componentDidMount() {
@@ -26,6 +29,14 @@ class About extends Component {
         });
     }, 2000);
   }
+
+  scrollSkill(direction){
+    let far = $( '#skills-container' ).width();
+    let pos = $('#skills-container').scrollLeft() + far;
+    $('#skills-container').animate( { scrollLeft: pos }, 1000)
+  }
+
+
 
   render() {
     let currAboutTitle=
@@ -52,19 +63,25 @@ class About extends Component {
                 </div>
               </div>
             </div>
-              <div id="skills-container">
-                <img className="skill" src="images/ruby.png" />
-                <img className="skill" src="images/rails.png" />
-                <img className="skill" src="images/javascript.png" />
-                <img className="skill" src="images/jquery.png" />
-                <img className="skill" src="images/react.svg" />
-                <img className="skill" src="images/redux.png" />
-                <img className="skill" src="images/html5.png" />
-                <img className="skill" src="images/css3.svg" />
-                <img className="skill" src="images/git.png" />
-                <img className="skill" src="images/bash.png" />
-                <img className="skill" src="images/R.svg" />
+            <div className="container bottom">
+              <div id="skills-wrapper">
+                <a className="prev" onClick={this.scrollSkill.bind(null,1)}>&#10094;</a>
+                <div id="skills-container">
+                  <img className="skill" src="images/ruby.png" />
+                  <img className="skill" src="images/rails.png" />
+                  <img className="skill" src="images/javascript.png" />
+                  <img className="skill" src="images/jquery.png" />
+                  <img className="skill" src="images/react.svg" />
+                  <img className="skill" src="images/redux.png" />
+                  <img className="skill" src="images/html5.png" />
+                  <img className="skill" src="images/css3.svg" />
+                  <img className="skill" src="images/git.png" />
+                  <img className="skill" src="images/bash.png" />
+                  <img className="skill" src="images/R.svg" />
+                </div>
+                <a className="next" onClick={this.scrollSkill.bind(null,-1)}>&#10095;</a>
               </div>
+            </div>
           </div>
 
       </section>

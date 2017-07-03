@@ -1,5 +1,5 @@
 .about {
-  background-color: white;
+  background-color: gold;
   top: 0;
 }
 
@@ -10,14 +10,13 @@
 
 }
 
-
 .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
-  margin: 10px;
   height: 100%;
+  width: 100%
 }
 
 #summary {
@@ -27,21 +26,17 @@
 }
 
 
-
-.top,.bottom {
+.top, .bottom {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
+  padding: 10px
 }
 
-
-#skills-container {
-  width: 50%;
-  overflow: auto;
-  overflow-y: hidden;
-  margin: 0 auto;
-  white-space: nowrap
+.bottom {
+  height: 40%
 }
+
 .right {
   width: 50%;
   align-items: center;
@@ -49,24 +44,60 @@
 
 .left {
   flex-direction: column;
+  flex-wrap: nowrap;
   width: 40%;
-  justify-content: space-between;
+  justify-content: space-around;
   vertical-align: center;
 }
 
-
-
 .skill {
-  width: 100px;
-  height: 100px;
-  margin: 20px 10px;
-  display: inline;
+  max-width:100%;
+  max-height:100%;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
+#skills-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline;
+  width: 50%;
+  height: 50%;
+}
 
-
+#skills-container {
+  display: inline-block;
+  overflow: hidden;
+  height: 100%;
+  white-space: nowrap;
+}
 
 .social {
   margin: 5px;
   border-radius: 3%;
+}
+
+.prev, .next {
+  position: absolute;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev {
+  left: 0;
+}
+
+.prev:hover, .next:hover {
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
 }
