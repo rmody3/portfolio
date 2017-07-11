@@ -36,6 +36,9 @@ class ImageCarousel extends Component {
     <div key={this.props.images[this.state.currentImageIndex]}>
       <img className="slide" src={this.props.images[this.state.currentImageIndex]}>
       </img>
+      <div id="description">
+        This is a test
+      </div>
     </div>
     return (
       <ReactCSSTransitionGroup
@@ -50,16 +53,4 @@ class ImageCarousel extends Component {
   }
 }
 
-
-// const mapStateToProps = (state) => {
-//   return {ImageCarousel: state.ImageCarousel}
-// }
-//
-// const mapDispatchToProps = (dispatch) => {
-// 	return bindActionCreators({
-//     updateImageCarousel: updateImageCarousel
-//   }, dispatch)
-// }
-
 export default ImageCarousel
-// connect(mapStateToProps, mapDispatchToProps)(ImageCarousel)

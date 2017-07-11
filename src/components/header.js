@@ -64,6 +64,7 @@ class Header extends Component {
           <div onClick={this.handleOnClick.bind(null, "about")}>About</div>
           <div onClick={this.handleOnClick.bind(null, "work")}>Work </div>
           <div><a href="https://medium.com/@RahulTMody">Blog</a></div>
+          <div><a href="mailto:rmody3@gmail.com">Contact Me!</a></div>
         </div>
       </nav>
     );

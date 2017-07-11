@@ -13,28 +13,31 @@ class Chronicle extends Component {
   render() {
     return (
       <div>
-        <h2>Chronicle</h2>
-        <p>When it comes to news, context is everything. Chronicle helps get the whole story</p>
-        <div className="left-container">
-          <ImageCarousel images={["images/chronicle/chronicle_home.png","images/chronicle/chronicle_welcome.png", "images/chronicle/chronicle_show.png"]} />
-          <div className="project_links_container">
-            <a target="_blank" title="demo Chronicle" href="http://getthewholestory.herokuapp.com/"><img className="project-links" src="images/button_demo.png" /></a>
-            <a target="_blank" title="demo Chronicle" href="http://getthewholestory.herokuapp.com/"><img className="project-links" src="images/button_view-on-github.png" /></a>
-          </div>
+        <div className="project-header">
+          <h2 className="title">Chronicle</h2>
+          <span>
+          <a target="_blank" className="project-links" title="demo Chronicle" href="http://getthewholestory.herokuapp.com/">Demo</a>
+          <a target="_blank" className="project-links"title="view on Github" href="https://github.com/rmody3/chronicle">View on Github</a>
+          </span>
         </div>
-        <div className="right-container">
-          <div className="summary">
-            Chronicle is a Ruby on Rails application that helps to keep track of topics over time.  The purpose of Chronicle is to help get a understanding of how topics are progressing, not just read and forget the latest news. With Chronicle you can create topics like Solar Techonolgy or SpaceX and save relevant news articles in chronological order. You can also view public Chronicles curated by people you trust.
+        <p className="tagline">When it comes to news, context is everything. Chronicle helps get the whole story</p>
+
+        <ImageCarousel images={["images/chronicle/chronicle_home.png","images/chronicle/chronicle_welcome.png", "images/chronicle/chronicle_show.png"]} />
+
+        <div className="information-container">
+          <div className="info">
+            Chronicle helps to keep track of topics over time. The purpose of Chronicle is to help get a understanding of how topics are progressing, not just read and forget the latest news. With Chronicle you can create topics like Solar Techonolgy or SpaceX and save relevant news articles in chronological order.
           </div>
-          <div className="detail-list">
+          <div className="info">
+            Features of Note:
             <ul>
-              <li>Tech Stack: Postgres, Ruby On Rails, JQuery</li>
-              <li>Interesting Technical Features:</li>
-                <ul>
-                  <li>Created carousel scrolling using the Owl-Carousel Gem</li>
-                  <li>Created upvote, downvote commenting system</li>
-                </ul>
+              <li>Carousel scrolling using the Owl-Carousel Gem</li>
+              <li>Upvote, downvote commenting system</li>
+              <li>Public and Private Chronciles edited only by creators</li>
             </ul>
+          </div>
+          <div className="info">
+            Tech Stack: Postgres, Ruby On Rails, JQuery
           </div>
         </div>
       </div>

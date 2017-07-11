@@ -33,9 +33,9 @@ class ProjectDetails extends Component {
   render() {
 
     return (
-      <section className={this.props.class}>
+      <div className={this.props.class}>
         {this.props.currProject}
-      </section>
+      </div>
     );
   }
 }

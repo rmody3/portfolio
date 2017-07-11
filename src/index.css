@@ -1,11 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Baloo|Permanent+Marker');
+
+
+
 body {
+  font-family: 'Baloo', cursive;
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
 }
 
 section {
   height: 100vh;
   margin: 0;
   padding: 0px;
+}
+
+h1, h2, h3 {
+  font-family: 'Permanent Marker', cursive;
 }

@@ -18,7 +18,7 @@ class Project extends Component {
 
   render() {
     return (
-      <div className="project" style={{background:this.props.color}} onClick={this.handleOnClick.bind(null,this.props.title)}>
+      <div className="project" id={this.props.id} onClick={this.handleOnClick.bind(null,this.props.id)}>
         <img className="project-icon" src={this.props.image} />
         <div className="project-title">{this.props.title}</div>
       </div>

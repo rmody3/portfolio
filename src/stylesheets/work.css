@@ -1,12 +1,8 @@
 .work {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-content: center;
+  display: block;
 }
 
 .projects-container {
-  position: auto;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;

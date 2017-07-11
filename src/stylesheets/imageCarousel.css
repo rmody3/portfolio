@@ -1,12 +1,11 @@
 .image-carousel {
-  border:2px solid #021a40;
   position: relative;
+  border:2px solid #021a40;
   overflow: hidden;
-  width: 100%;
-  height: 40%;
   top: 0;
-  left: 0;
-  margin: 10px;
+  margin: 0 auto;
+  width: 50%;
+  height: 50%;
 }
 
 .slide {
@@ -18,6 +17,16 @@
   margin-top: auto;
 }
 
+#description {
+  position: absolute;
+  background: black;
+  color: white;
+  opacity: .8;
+  top: 90%;
+  width: 100%;
+  text-align: center;
+  transition: all 1000ms ease-in-out;
+}
 
 .translate-enter {
   transform: translateX(100%);

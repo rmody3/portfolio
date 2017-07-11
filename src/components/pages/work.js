@@ -24,13 +24,13 @@ class Work extends Component {
 
   updateProjectDetails(project){
     switch (project) {
-      case "Chronicle":
+      case "chronicle":
         var currProject = <Chronicle />
         break;
-      case "Prescribed":
+      case "prescribed":
         currProject = <Prescribed />
         break;
-      case "Yea or Nay":
+      case "yea_or_nay":
         currProject = <YeaOrNay />
         break;
     }
@@ -51,25 +51,27 @@ class Work extends Component {
           }
       })
     }
+    let height = $("#header").outerHeight()
     $('html,body').animate({
-            scrollTop: $("section.projectDetails-inactive").offset().top - 190},
+            scrollTop: $("div.projectDetails-inactive").position().top - height},
         500);
     $('html,body').animate({
-            scrollTop: $("section.projectDetails-active").offset().top} - 190,
+            scrollTop: $("div.projectDetails-active").position().top - height},
         500);
   }
 
 
   render() {
     return (
-      <section className="work">
+      <div className="work">
+        <h1>Projects</h1>
         <div className="projects-container">
-          <Project color="blue" image='images/chronicle_logo.svg' title='Chronicle' updateProjectDetails={this.updateProjectDetails}/>
-          <Project color="red" image='images/prescribed_logo.svg' title='Prescribed' updateProjectDetails={this.updateProjectDetails}/>
-          <Project color="green" image='images/yay_or_nay_logo.svg'title='Yea or Nay' updateProjectDetails={this.updateProjectDetails}/>
+          <Project id="chronicle" image='images/chronicle_logo.svg' title='Chronicle' updateProjectDetails={this.updateProjectDetails}/>
+          <Project id="prescribed" image='images/prescribed_logo.svg' title='Prescribed' updateProjectDetails={this.updateProjectDetails}/>
+          <Project id="yea_or_nay" image='images/yay_or_nay_logo.svg'title='Yea or Nay' updateProjectDetails={this.updateProjectDetails}/>
         </div>
         {<ProjectDetails class={this.state.class} currProject={this.state.currProject}/> }
-      </section>
+      </div>
     );
   }
 }
