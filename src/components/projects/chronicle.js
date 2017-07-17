@@ -16,7 +16,7 @@ class Chronicle extends Component {
         <div className="project-header">
           <h2 className="title">Chronicle</h2>
           <span>
-          <a target="_blank" className="project-links" title="demo Chronicle" href="http://getthewholestory.herokuapp.com/">Demo</a>
+          <a target="_blank" className="project-links" title="demo" href="http://getthewholestory.herokuapp.com/">Demo</a>
           <a target="_blank" className="project-links"title="view on Github" href="https://github.com/rmody3/chronicle">View on Github</a>
           </span>
         </div>

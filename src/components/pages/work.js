@@ -15,7 +15,7 @@ class Work extends Component {
   constructor(){
     super()
     this.state = {
-      currProject: null,
+      project: null,
       class: "projectDetails-inactive",
       currProjectTitle: null
     }
@@ -25,19 +25,46 @@ class Work extends Component {
   updateProjectDetails(project){
     switch (project) {
       case "chronicle":
-        var currProject = <Chronicle />
+        var project = {
+          title: "Chronicle",
+          github: "http://getthewholestory.herokuapp.com/",
+          demo: "https://github.com/rmody3/chronicle",
+          tagline: "When it comes to news, context is everything. Chronicle helps get the whole story",
+          images: ["images/chronicle/chronicle_home.png","images/chronicle/chronicle_welcome.png", "images/chronicle/chronicle_show.png"],
+          summary: "Chronicle helps to keep track of topics over time. The purpose of Chronicle is to help get a understanding of how topics are progressing, not just read and forget the latest news. With Chronicle you can create topics like Solar Techonolgy or SpaceX and save relevant news articles in chronological order.",
+          features: ["Carousel scrolling using the Owl-Carousel Gem", "Upvote, downvote commenting system", "Public and Private Chronciles edited only by creators"],
+          stack: "Tech Stack: Postgres, Ruby On Rails, JQuery"
+        }
         break;
       case "prescribed":
-        currProject = <Prescribed />
+        project = {
+          title: "Prescribed",
+          github: "http://getthewholestory.herokuapp.com/",
+          demo: "https://github.com/rmody3/chronicle",
+          tagline: "When it comes to news, context is everything. Chronicle helps get the whole story",
+          images: ["images/chronicle/chronicle_home.png","images/chronicle/chronicle_welcome.png", "images/chronicle/chronicle_show.png"],
+          summary: "Chronicle helps to keep track of topics over time. The purpose of Chronicle is to help get a understanding of how topics are progressing, not just read and forget the latest news. With Chronicle you can create topics like Solar Techonolgy or SpaceX and save relevant news articles in chronological order.",
+          features: ["Carousel scrolling using the Owl-Carousel Gem", "Upvote, downvote commenting system", "Public and Private Chronciles edited only by creators"],
+          stack: "Tech Stack: Postgres, Ruby On Rails, JQuery"
+        }
         break;
       case "yea_or_nay":
-        currProject = <YeaOrNay />
+        project = {
+          title: "Yea Or Nay",
+          github: "http://getthewholestory.herokuapp.com/",
+          demo: "https://github.com/rmody3/chronicle",
+          tagline: "When it comes to news, context is everything. Chronicle helps get the whole story",
+          images: ["images/chronicle/chronicle_home.png","images/chronicle/chronicle_welcome.png", "images/chronicle/chronicle_show.png"],
+          summary: "Chronicle helps to keep track of topics over time. The purpose of Chronicle is to help get a understanding of how topics are progressing, not just read and forget the latest news. With Chronicle you can create topics like Solar Techonolgy or SpaceX and save relevant news articles in chronological order.",
+          features: ["Carousel scrolling using the Owl-Carousel Gem", "Upvote, downvote commenting system", "Public and Private Chronciles edited only by creators"],
+          stack: "Tech Stack: Postgres, Ruby On Rails, JQuery"
+        }
         break;
     }
     if (this.state.class == "projectDetails-active" && this.state.currProjectTitle===project){
       this.setState(() => {
           return {
-            currProject: null,
+            project: project,
             currProjectTitle: null,
             class: "projectDetails-inactive"
           }
@@ -45,7 +72,7 @@ class Work extends Component {
     } else {
       this.setState(() => {
           return {
-            currProject: currProject,
+            project: project,
             currProjectTitle: project,
             class: "projectDetails-active"
           }
@@ -70,7 +97,7 @@ class Work extends Component {
           <Project id="prescribed" image='images/prescribed_logo.svg' title='Prescribed' updateProjectDetails={this.updateProjectDetails}/>
           <Project id="yea_or_nay" image='images/yay_or_nay_logo.svg'title='Yea or Nay' updateProjectDetails={this.updateProjectDetails}/>
         </div>
-        {<ProjectDetails class={this.state.class} currProject={this.state.currProject}/> }
+        {<ProjectDetails class={this.state.class} project={this.state.project}/> }
       </div>
     );
   }
